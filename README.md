@@ -1,3 +1,6 @@
+<img src="https://raw.githubusercontent.com/rochamrcs/naregua/main/assets/images/Group%201.png" alt="Descrição da Imagem" width="509" height="202">
+
+
 # Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
