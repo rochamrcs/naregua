@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/rochamrcs/naregua/main/assets/images/Group%201.png" alt="Descrição da Imagem" width="509" height="202">
+<img src="https://raw.githubusercontent.com/rochamrcs/naregua/main/assets/images/Group%201.png" alt="Descrição da Imagem" width="100%" height="100%">
 
 
 # Welcome to your Expo app 👋
