@@ -15,7 +15,7 @@ export default function Index() {
           source={require("../../assets/images/User.png")}
           style={styles.inputImg}
         />
-        <TextInput style={styles.input}placeholder="Digite seu login"></TextInput>
+        <TextInput style={styles.input} placeholder="Digite seu login"></TextInput>
 
       </View>
 
@@ -25,7 +25,7 @@ export default function Index() {
           source={require("../../assets/images/Key.png")}
           style={styles.inputImg}
         />
-        <TextInput style={styles.input}placeholder="Digite sua senha"></TextInput>
+        <TextInput style={styles.input} placeholder="Digite sua senha"></TextInput>
 
       </View>
 
