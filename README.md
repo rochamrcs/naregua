@@ -19,6 +19,9 @@ Tecnologias:
 <img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="Logo React Native">
 <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" alt="Logo SQLite">
 
+## Arquivos do Projeto:
+
+- [Planilha de acompanhamento](https://docs.google.com/spreadsheets/d/1kSl5tSWoewCmpA_lLjaFwuQcMvhox8GEV6pbZhysG5U/edit?usp=sharing)
 
 ## Como executar ?
 
