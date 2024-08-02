@@ -3,37 +3,52 @@ import { Text, View, StyleSheet, Image, TextInput, TouchableOpacity} from "react
 export default function Index() {
   return (
     <View style={styles.container}>
-      <Image
-        source={require("../../assets/images/logo.png")}
-        style={styles.logo}
-      />
-      <Text style={styles.textTitle}>Na Régua</Text>
 
-      <View style={styles.form}>
-
+      <View style={styles.container_logo}>
         <Image
-          source={require("../../assets/images/User.png")}
-          style={styles.inputImg}
+          source={require("../../assets/images/logo.png")}
+          style={styles.logo}
         />
-        <TextInput style={styles.input} placeholder="Digite seu login"></TextInput>
+        <Text style={styles.textTitle}>Na Régua</Text>
+      </View>
+
+      <View style={styles.container_form}>
+        <View style={styles.form}>
+          <Image
+            source={require("../../assets/images/User.png")}
+            style={styles.inputImg}
+          />
+          <TextInput style={styles.input} placeholder="Digite seu login"></TextInput>
+        </View>
+
+      <View style={{gap:3}}>
+        <View style={styles.form}>
+          <Image
+            source={require("../../assets/images/Key.png")}
+            style={styles.inputImg}
+          />
+          <TextInput style={styles.input} placeholder="Digite sua senha"></TextInput>
+        </View>
+
+        <TouchableOpacity>
+          <Text style={styles.lembrarSenha}>Lembrar senha</Text>
+        </TouchableOpacity>
 
       </View>
 
-      <View style={styles.form}>
-
-        <Image
-          source={require("../../assets/images/Key.png")}
-          style={styles.inputImg}
-        />
-        <TextInput style={styles.input} placeholder="Digite sua senha"></TextInput>
-
-      </View>
+    </View>
 
       <TouchableOpacity style={styles.button}>
         <Text style={styles.textbutton}>Acessar</Text>
       </TouchableOpacity>
 
+      <TouchableOpacity>
+          <Text style={styles.lembrarSenha}>Criar uma conta</Text>
+      </TouchableOpacity>
+
     </View>
+
+
   );
 }
 
@@ -43,7 +58,18 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#1E1C1F",
-    
+    gap: 80,
+  },
+  container_logo: {
+    alignItems: "center",
+  },
+  container_form: {
+    alignItems: "center",
+    gap: 35,
+  },
+  lembrarSenha: {
+    color: "#5F5F5F",
+    fontSize: 13,
   },
   textTitle: {
     color: "#FFFFFF",
