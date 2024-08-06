@@ -10,7 +10,7 @@ module.exports = {
         popMedium: ["Poppins_Medium", "sans-serif"],
         popRegular: ["Poppins_Regular", "sans-serif"],
         popSemibold: ["Poppins_SemiBold", "sans-serif"],
-        popThin: ["Poppins_Thin", "sans-serif"],
+        popThin: ["Poppins_Thin", "sans-serif"]
       },
     },
   },
