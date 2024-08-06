@@ -1,3 +1,4 @@
+import { Link } from "expo-router";
 import { Text, View, StyleSheet, Image, TextInput, TouchableOpacity} from "react-native";
 
 export default function Index() {
@@ -45,6 +46,8 @@ export default function Index() {
       <TouchableOpacity>
           <Text style={styles.lembrarSenha}>Criar uma conta</Text>
       </TouchableOpacity>
+
+      <Link href={"/home"}>Home</Link>
 
     </View>
 
