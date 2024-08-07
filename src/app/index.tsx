@@ -10,7 +10,7 @@ export default function Index() {
           source={require("../../assets/images/logo.png")}
           style={styles.logo}
         />
-        <Text className="text-white font-popBold text-3xl m-0">Na Régua</Text>
+        <Text className="text-white font-popBold text-3xl">Na Régua</Text>
       </View>
 
       <View style={styles.container_form}>
