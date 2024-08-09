@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const Agendamento = () => {
+const Agenda = () => {
   return (
     <View>
-      <Text>Agendamento</Text>
+      <Text>Agenda</Text>
     </View>
   )
 }
 
-export default Agendamento
+export default Agenda

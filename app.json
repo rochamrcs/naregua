@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "naregua",
+    "name": "NaRegua",
+    "scheme":"naregua",
     "slug": "naregua",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "",
-    "scheme": "myapp",
-    "userInterfaceStyle": "automatic",
+    "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/images/logo.png",
+      "image": "",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -22,16 +22,11 @@
       }
     },
     "web": {
-      "bundler": "metro",
-      "output": "static",
       "favicon": ""
     },
     "plugins": [
-      "expo-router",
+      "expo-router", 
       "expo-font"
-    ],
-    "experiments": {
-      "typedRoutes": true
-    }
+    ]
   }
 }
