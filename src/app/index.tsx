@@ -40,14 +40,12 @@ export default function Index() {
     </View>
 
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.textbutton}>Acessar</Text>
+        <Link href={"/home"} style={styles.textbutton}>Acessar</Link>
       </TouchableOpacity>
 
       <TouchableOpacity>
-          <Text style={styles.lembrarSenha}>Criar uma conta</Text>
+          <Link href={"/cadastro"} style={styles.lembrarSenha}>Criar uma conta</Link>
       </TouchableOpacity>
-
-      <Link href={"/home"}>Home</Link>
 
     </View>
 

@@ -2,7 +2,7 @@ import { SplashScreen, Stack } from "expo-router";
 import { useFonts } from "expo-font"
 import { useEffect } from "react";
 
-// SplashScreen.preventAutoHideAsync();
+SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
 
@@ -11,15 +11,15 @@ export default function RootLayout() {
     "Poppins_Medium": require("../../assets/fonts/Poppins_Medium.otf"),
     "Poppins_Regular": require("../../assets/fonts/Poppins_Regular.otf"),
     "Poppins_SemiBold": require("../../assets/fonts/Poppins_SemiBold.otf"),
-    "Poppins_Thin": require("../../assets/fonts/Poppins_Thin.otf")
+    "Poppins_Thin": require("../../assets/fonts/Poppins_Thin.otf"),
   })
 
   useEffect(() => {
     if(error) throw error;
-    // if(fontsLoaded) SplashScreen.hideAsync
+    if(fontsLoaded) SplashScreen.hideAsync();
   }, [fontsLoaded, error])
 
-  // if(!fontsLoaded && !error) return null
+  if(!fontsLoaded && !error) return null
 
   return (
     <Stack>
