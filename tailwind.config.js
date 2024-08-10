@@ -1,9 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./app/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./app/**/*.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,jsx,ts,tsx}",
+    "./constants/**/*.{js,jsx,ts,tsx}",
+    ],
   theme: {
     extend: {
       colors: {
+        primary: "#1E1C1F",
+        secondary: "#D49929",
       },
       fontFamily: {
         popBold: ["Poppins_Bold", "sans-serif"],
