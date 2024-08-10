@@ -4,6 +4,8 @@ import agenda from "../assets/icons/agenda.png"
 import agendaFilled from "../assets/icons/agendaFilled.png"
 import perfil from "../assets/icons/perfil.png"
 import perfilFilled from "../assets/icons/perfilFilled.png"
+import exibir from "../assets/icons/olho.png"
+import ocultar from "../assets/icons/olhos-cruzados.png"
 
 const icons = {
     home,
@@ -11,7 +13,9 @@ const icons = {
     agenda,
     agendaFilled,
     perfil,
-    perfilFilled
+    perfilFilled,
+    exibir,
+    ocultar
 }
 
 
