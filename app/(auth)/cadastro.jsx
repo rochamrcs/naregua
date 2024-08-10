@@ -33,7 +33,7 @@ const subtmit = () => {
 
           <CustomFormFild
             title="Usuario"
-            placeholder="Digite seu e-mail"
+            placeholder="Digite seu usuario"
             value= {form.usuario}
             handleChangeText={(e) => setForm({ ...form, usuario: e})}
             otherStyles="mt-7"
