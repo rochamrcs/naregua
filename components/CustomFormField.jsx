@@ -3,13 +3,13 @@ import React, { useState } from 'react'
 
 import icons from "../constants/icons"
 
-const CustomFormFild = ({ title, value, placeholder, handleChangeText, otherStyles, ...props}) => {
+const CustomFormFild = ({ title, value, placeholder, handleChangeText, otherStyles,titleStyles = "text-gray-100", ...props}) => {
 
     const [showPassword, setShowPassword] = useState(false)
 
   return (
     <View className={`sapece-y-2 ${otherStyles}`}>
-        <Text className="text-base text-gray-100 mb-1">
+        <Text className={`text-base ${titleStyles} mb-1`}>
             {title}
         </Text>
         <View className="border-2 border-black w-full h-[55px] px-4 bg-black rounded-[3px] focus:border-secondary items-center flex flex-row">
