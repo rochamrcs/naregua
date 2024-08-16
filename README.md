@@ -9,8 +9,6 @@ Fique Na Régua é um aplicativo de agendamento de barbearia desenvolvido como p
 ## Objetivo:
 Implementar uma solução mobile que permita ao barbeiro Gabriel gerenciar seus agendamentos de forma automatizada, reduzindo erros e otimizando o fluxo de clientes na barbearia.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
-
 Tecnologias:
 <br>
 <br>
@@ -18,6 +16,8 @@ Tecnologias:
 <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Logo Node.JS">
 <img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="Logo React Native">
 <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" alt="Logo SQLite">
+
+Esse é um projeto [Expo](https://expo.dev) criado com [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
 ## Arquivos do Projeto:
 
