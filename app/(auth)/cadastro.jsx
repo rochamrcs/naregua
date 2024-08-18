@@ -17,7 +17,7 @@ const Cadastro = () => {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const navigation = useNavigation();
-    //function to handle registration logic
+
     const handleRegister = async() => {
         if  (userName.length === 0 || password.length === 0 || confirmPassword.length === 0) {
             Alert.alert('Atenção!', 'Por favor preencha todos os campos!.');
@@ -34,7 +34,6 @@ const Cadastro = () => {
                 return;
             }
 
-            // Verificar se o email já existe
             const existingEmail = await db.getFirstAsync('SELECT * FROM users WHERE email = ?', [userEmail]);
             if (existingEmail) {
                 Alert.alert('Error', 'Email existente');

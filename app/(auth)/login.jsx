@@ -7,6 +7,7 @@ import { useSQLiteContext } from 'expo-sqlite';
 import LogoArea from 'components/LogoArea'
 import CustomFormFild from 'components/CustomFormField'
 import CustomButton from '../../components/CustomButton'
+import { useUser } from "context/UserContext";
 
 const Login = () => {
 
@@ -14,6 +15,7 @@ const Login = () => {
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const router = useRouter();
+  const { setUser } = useUser();
 
   //function to handle login logic
   const handleLogin = async() => {
@@ -30,6 +32,7 @@ const Login = () => {
           const validUser = await db.getFirstAsync('SELECT * FROM users WHERE username = ? AND password = ?', [userName, password]);
           if(validUser) {
               Alert.alert('Sucesso', 'Bem vindo!');
+              setUser(userName);
               router.push('/home', {user:userName});
               setUserName('');
               setPassword('');
