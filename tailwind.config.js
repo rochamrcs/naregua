@@ -10,7 +10,8 @@ module.exports = {
       colors: {
         primary: "#1E1C1F",
         secondary: "#D49929",
-        black: "#2B2B2B"
+        black: "#2B2B2B",
+        card: "#9B836E",
       },
       fontFamily: {
         popBold: ["Poppins_Bold", "sans-serif"],
