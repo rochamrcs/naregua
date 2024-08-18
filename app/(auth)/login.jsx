@@ -18,26 +18,26 @@ const Login = () => {
   //function to handle login logic
   const handleLogin = async() => {
       if(userName.length === 0 || password.length === 0) {
-          Alert.alert('Attention','Please enter both username and password');
+          Alert.alert('Atenção','Preencha os campos com seu usuário e senha');
           return;
       }
       try {
           const user = await db.getFirstAsync('SELECT * FROM users WHERE username = ?', [userName]);
           if (!user) {
-              Alert.alert('Error', 'Username does not exist !');
+              Alert.alert('Erro', 'Esse usuário não existe !');
               return;
           }
           const validUser = await db.getFirstAsync('SELECT * FROM users WHERE username = ? AND password = ?', [userName, password]);
           if(validUser) {
-              Alert.alert('Success', 'Login successful');
+              Alert.alert('Sucesso', 'Bem vindo!');
               router.push('/home', {user:userName});
               setUserName('');
               setPassword('');
           } else {
-              Alert.alert('Error', 'Incorrect password');
+              Alert.alert('Erro', 'Senha incorreta');
           }
       } catch (error) {
-          console.log('Error during login : ', error);
+          console.log('Erro durante o login : ', error);
       }
   }
 

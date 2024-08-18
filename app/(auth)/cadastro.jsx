@@ -20,32 +20,32 @@ const Cadastro = () => {
     //function to handle registration logic
     const handleRegister = async() => {
         if  (userName.length === 0 || password.length === 0 || confirmPassword.length === 0) {
-            Alert.alert('Attention!', 'Please enter all the fields.');
+            Alert.alert('Atenção!', 'Por favor preencha todos os campos!.');
             return;
         }
         if (password !== confirmPassword) {
-            Alert.alert('Error', 'Password do not match');
+            Alert.alert('Atenção!', 'As senhas não são iguais!');
             return;
         }
         try {
             const existingUser = await db.getFirstAsync('SELECT * FROM users WHERE username = ?', [userName]);
             if (existingUser) {
-                Alert.alert('Error', 'Username already exists.');
+                Alert.alert('Erro', 'Usuário existente');
                 return;
             }
 
             // Verificar se o email já existe
             const existingEmail = await db.getFirstAsync('SELECT * FROM users WHERE email = ?', [userEmail]);
             if (existingEmail) {
-                Alert.alert('Error', 'Email already exists.');
+                Alert.alert('Error', 'Email existente');
                 return;
             }
 
             await db.runAsync('INSERT INTO users (username, password, role) VALUES (?, ?, "User")', [userName, password]);
-            Alert.alert('Success', 'Registration successful!');
+            Alert.alert('Sucesso', 'Cadastro concluído');
             navigation.navigate('login', {user : userName});
         } catch (error) {
-            console.log('Error during registration : ', error);
+            console.log('Erro durante o cadastro : ', error);
         }
 
       } 
