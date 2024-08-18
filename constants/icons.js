@@ -6,6 +6,8 @@ import perfil from "../assets/icons/perfil.png"
 import perfilFilled from "../assets/icons/perfilFilled.png"
 import exibir from "../assets/icons/olho.png"
 import ocultar from "../assets/icons/olhos-cruzados.png"
+import definicoes from "../assets/icons/definicoes.png"
+import definicoesFilled from "../assets/icons/definicoes_full.png"
 
 const icons = {
     home,
@@ -15,7 +17,9 @@ const icons = {
     perfil,
     perfilFilled,
     exibir,
-    ocultar
+    ocultar,
+    definicoes,
+    definicoesFilled
 }
 
 
