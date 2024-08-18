@@ -1,5 +1,5 @@
 import { View, Text, Image} from 'react-native'
-import { Tabs, Redirect} from 'expo-router'
+import { Tabs } from 'expo-router'
 
 import icons from '../../constants/icons'
 
@@ -32,13 +32,28 @@ const TabsLayout = () => {
           tabBarActiveTintColor: '#D49929',
           tabBarInactiveTintColor: '#A7896E',
           tabBarStyle: {
-            backgroundColor: '#231F1E',
+            backgroundColor: '#1E1C1F',
             borderTopWidth: 1,
-            borderTopColor: '#232533',
+            borderTopColor: '#1E1C1F',
             height: 84,
           }
         }}
       >
+        <Tabs.Screen
+          name="perfil"
+          options={{
+            title: "Perfil",
+            headerShown: false,
+            tabBarIcon: ({ color, focused }) => (
+              <TabIcon
+                icon={focused ? icons.perfilFilled : icons.perfil}
+                color={color}
+                name="Perfil"
+                focused={focused}
+              />
+            )
+          }}
+        />
         <Tabs.Screen
           name="home"
           options={{
@@ -50,35 +65,20 @@ const TabsLayout = () => {
                 color={color}
                 name="Home"
                 focused={focused}
-              />
-            )
-          }}
+                />
+              )
+            }}
         />
-                <Tabs.Screen
-          name="agenda"
+        <Tabs.Screen
+          name="config"
           options={{
-            title: "Agenda",
+            title: "Configurações",
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
               <TabIcon
-                icon={focused ? icons.agendaFilled : icons.agenda}
+                icon={focused ? icons.definicoesFilled : icons.definicoes}
                 color={color}
-                name="Agenda"
-                focused={focused}
-              />
-            )
-          }}
-        />
-                <Tabs.Screen
-          name="perfil"
-          options={{
-            title: "Perfil",
-            headerShown: false,
-            tabBarIcon: ({ color, focused }) => (
-              <TabIcon
-                icon={focused ? icons.perfilFilled : icons.perfil}
-                color={color}
-                name="Perfil"
+                name="Configurações"
                 focused={focused}
               />
             )
