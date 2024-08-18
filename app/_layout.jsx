@@ -22,7 +22,7 @@ export default function RootLayout() {
   if(!fontsLoaded && !error) return null
 
   return (
-      <Stack>
+      <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="index" options={{headerShown: false}}/>
         <Stack.Screen name="(auth)" options={{headerShown: false}}/>
       </Stack>
