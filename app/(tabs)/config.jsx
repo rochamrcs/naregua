@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const Agenda = () => {
+const Configs = () => {
   return (
     <View>
-      <Text>Agenda</Text>
+      <Text>Configurações</Text>
     </View>
   )
 }
 
-export default Agenda
+export default Configs
