@@ -1,7 +1,8 @@
-import { View, ScrollView, Text } from 'react-native'
+import { View, ScrollView, Alert } from 'react-native'
 import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { Link } from 'expo-router'
+import { Link, useRouter } from 'expo-router'
+import { useSQLiteContext } from 'expo-sqlite';
 
 import LogoArea from 'components/LogoArea'
 import CustomFormFild from 'components/CustomFormField'
@@ -9,17 +10,37 @@ import CustomButton from '../../components/CustomButton'
 
 const Login = () => {
 
-  const [form, setForm] = useState({
-    email: '',
-    password: ''
-  })
+  const db = useSQLiteContext();
+  const [userName, setUserName] = useState('');
+  const [password, setPassword] = useState('');
+  const router = useRouter();
 
-const [isSubmitting, setIsSubmitting] = useState(false)
+  //function to handle login logic
+  const handleLogin = async() => {
+      if(userName.length === 0 || password.length === 0) {
+          Alert.alert('Attention','Please enter both username and password');
+          return;
+      }
+      try {
+          const user = await db.getFirstAsync('SELECT * FROM users WHERE username = ?', [userName]);
+          if (!user) {
+              Alert.alert('Error', 'Username does not exist !');
+              return;
+          }
+          const validUser = await db.getFirstAsync('SELECT * FROM users WHERE username = ? AND password = ?', [userName, password]);
+          if(validUser) {
+              Alert.alert('Success', 'Login successful');
+              router.push('/home', {user:userName});
+              setUserName('');
+              setPassword('');
+          } else {
+              Alert.alert('Error', 'Incorrect password');
+          }
+      } catch (error) {
+          console.log('Error during login : ', error);
+      }
+  }
 
-const subtmit = () => {
-
-}
-  
   return (
     <SafeAreaView className="bg-primary h-full">
       <ScrollView>
@@ -28,27 +49,25 @@ const subtmit = () => {
           />
 
           <CustomFormFild
-            title="Email"
-            placeholder="Digite seu e-mail"
-            value= {form.email}
-            handleChangeText={(e) => setForm({ ...form, email: e})}
+            title="Usuário"
+            placeholder="Digite seu usuário"
+            value= {userName}
+            handleChangeText={setUserName}
             otherStyles="mt-7"
-            keyboardType="email-addess"
           />
 
           <CustomFormFild
             title="Senha"
             placeholder="Digite sua senha"
-            value= {form.senha}
-            handleChangeText={(e) => setForm({ ...form, senha: e})}
+            value= {password}
+            handleChangeText={setPassword}
             otherStyles="mt-7"
           />
 
           <CustomButton
             title="Entrar"
-            handlePress={subtmit}
+            handlePress={handleLogin}
             containerStyles="w-full mt-[84px]"
-            isLoading={isSubmitting}
           />
 
           <View className="justify-center pt-5 flex-row gap-2">
