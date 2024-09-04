@@ -31,10 +31,8 @@ const Home = () => {
 
   return (
     <SafeAreaView className="bg-primary h-full">
-        <View className="w-full min-h-[85vh] px-[20px] my-[25px]">
-          <Text className="text-center text-[22px] font-popMedium text-white">{`Bem-vindo(a)! ${user}`}</Text>
-
-          <View className="my-[17px]">
+        <View className="w-full min-h-[85vh] px-[20px]">
+          <View>
             <Text className="text-white font-popRegular">Seus agendamentos</Text>
             <View className="bg-card rounded-[5px] pl-[16px] pt-[8px] pb-[14px] pr-[31px]">
               <Text className="text-white font-popSemibold text-[28px]">Nada agendado para hoje</Text>
