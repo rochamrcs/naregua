@@ -18,12 +18,6 @@ const TabIcon = ({ icon }) => {
   )
 }
 
-const CustomDrowerMenuTitle = ({ title }) => (
-  <Text style={{ color: '#FFFFFF', marginTop: 35, marginBottom: 20, fontFamily: 'font-popSemibold', fontSize: 18, textAlign: 'center' }}>
-    {title}
-  </Text>
-);
-
 const CustomHeaderTitle = ({ title }) => (
   <Text className="text-white mt-[35px] mb-[20px] font-popSemibold text-[18px] text-center">{title}</Text>
 );
@@ -59,12 +53,6 @@ const TabsLayout = () => {
           options={{
             drawerLabel: 'Home',
             drawerIcon: () => <TabIcon icon={icons.home}/>
-          }}/>
-        <Drawer.Screen
-          name='perfil'
-          options={{
-            drawerLabel: 'Perfil',
-            drawerIcon: () => <TabIcon icon={icons.perfil}/>
           }}/>
         <Drawer.Screen
           name='config'
